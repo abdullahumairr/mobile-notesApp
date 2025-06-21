@@ -25,36 +25,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF111827),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               "images/logo.png",
-              width: 150,
-              height: 150,
+              width: 300,
+              height: 300,
             ),
             const SizedBox(
               height: 20,
-            ),
-            RichText(
-              text: const TextSpan(
-                style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
-                children: [
-                  TextSpan(
-                    text: 'Kodein',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  WidgetSpan(
-                      child: SizedBox(
-                    width: 5,
-                  )),
-                  TextSpan(
-                      text: 'Notes',
-                      style: TextStyle(color: Colors.deepOrangeAccent))
-                ],
-              ),
             ),
           ],
         ),

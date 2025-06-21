@@ -22,27 +22,25 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(248, 17, 24, 39),
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: Color(0xFFFF5722),
-            size: 24,
+            color: const Color.fromARGB(237, 255, 193, 7),
           ),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           'Note Details',
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 20,
             fontWeight: FontWeight.w700,
-            color: Colors.black87,
+            color: const Color.fromARGB(204, 255, 255, 255),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF111827),
         elevation: 0,
-        centerTitle: false,
       ),
       body: Column(
         children: [
@@ -75,7 +73,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black87,
+                        color: const Color.fromARGB(214, 255, 193, 7),
                         letterSpacing: -0.5,
                       ),
                     ),
@@ -87,7 +85,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       formatDateTime(widget.note.dateTime),
                       style: TextStyle(
                         fontSize: 13,
-                        color: Color(0xFF9E9E9E),
+                        color: const Color.fromARGB(200, 158, 158, 158),
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -99,7 +97,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       widget.note.content,
                       style: TextStyle(
                         fontSize: 15,
-                        color: Color(0xFF616161),
+                        color: const Color.fromARGB(204, 255, 255, 255),
                         height: 1.5,
                         letterSpacing: 0.1,
                       ),
@@ -117,7 +115,7 @@ class _DetailScreenState extends State<DetailScreen> {
             width: double.infinity,
             padding: EdgeInsets.fromLTRB(24, 16, 24, 32),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: const Color.fromARGB(248, 17, 24, 39),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.04),
@@ -148,7 +146,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFFF5722),
+                        backgroundColor: Color.fromARGB(214, 255, 193, 7),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -244,7 +242,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFE53935),
+                        backgroundColor: Color.fromARGB(200, 158, 158, 158),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),

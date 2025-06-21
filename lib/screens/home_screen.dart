@@ -37,12 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: AppHeader(),
-        backgroundColor: Colors.white,
-        elevation: 0,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(56),
+        child: AppHeader(),
       ),
-      backgroundColor: const Color(0xFFFDFDFD),
+      backgroundColor: const Color.fromARGB(248, 17, 24, 39),
       body: SafeArea(
         child: notesList.isEmpty ? _buildEmptyState() : _buildNotesListView(),
       ),
@@ -58,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
             _loadNotes(); // refresh data dari database
           }
         },
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: const Color.fromARGB(237, 255, 193, 7),
         child: Icon(
           Icons.add,
           size: 32,
@@ -89,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF2C3E50),
+              color: const Color.fromARGB(214, 255, 193, 7),
             ),
           ),
           SizedBox(height: 12),
@@ -98,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,
-              color: Colors.grey[600],
+              color: const Color.fromARGB(204, 255, 255, 255),
               height: 1.5,
             ),
           ),
@@ -137,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.white,
+                    color: const Color(0xFF111827),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.05),
@@ -167,6 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
+                                color: const Color.fromARGB(214, 255, 193, 7),
                               ),
                             ),
                             SizedBox(height: 4),
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               note.content,
                               style: TextStyle(
                                 fontSize: 14,
-                                color: Colors.black54,
+                                color: const Color.fromARGB(204, 255, 255, 255),
                               ),
                               maxLines: 2, // Batasi maksimal 2 baris
                               overflow: TextOverflow
@@ -185,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               formatDateTime(note.dateTime),
                               style: TextStyle(
                                 fontSize: 12,
-                                color: Colors.grey,
+                                color: const Color.fromARGB(200, 158, 158, 158),
                               ),
                             ),
                           ],

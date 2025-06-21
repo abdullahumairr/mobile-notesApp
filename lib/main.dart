@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:notes/screens/add_screen.dart';
+import 'package:notes/screens/home_screen.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 import 'package:notes/screens/splash_screen.dart';
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Kodein Notes',
       theme: ThemeData(
         useMaterial3: true,
+        fontFamily: 'Nunito',
       ),
       home: SplashScreen(),
     );

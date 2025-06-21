@@ -45,12 +45,12 @@ class _UpdateScreenState extends State<UpdateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(248, 17, 24, 39),
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: Colors.deepOrangeAccent,
+            color: const Color.fromARGB(237, 255, 193, 7),
           ),
           onPressed: () => Navigator.pop(context),
         ),
@@ -59,10 +59,10 @@ class _UpdateScreenState extends State<UpdateScreen> {
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w700,
-            color: Colors.black,
+            color: const Color.fromARGB(204, 255, 255, 255),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF111827),
         elevation: 0,
       ),
       body: Padding(
@@ -72,10 +72,20 @@ class _UpdateScreenState extends State<UpdateScreen> {
           children: [
             TextFormField(
               controller: _titleController,
+              style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: 'Note Title',
-                border: OutlineInputBorder(
+                hintStyle: const TextStyle(
+                    color: const Color.fromARGB(204, 255, 255, 255)),
+                enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
+                  borderSide: const BorderSide(
+                      color: const Color.fromARGB(204, 255, 255, 255)),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide:
+                      const BorderSide(color: Color.fromARGB(237, 255, 193, 7)),
                 ),
                 contentPadding:
                     const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
@@ -87,10 +97,19 @@ class _UpdateScreenState extends State<UpdateScreen> {
             TextFormField(
               controller: _contentController,
               maxLines: 5,
+              style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                hintText: 'Note Content',
-                border: OutlineInputBorder(
+                hintStyle: const TextStyle(
+                    color: const Color.fromARGB(204, 255, 255, 255)),
+                enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
+                  borderSide: const BorderSide(
+                      color: const Color.fromARGB(204, 255, 255, 255)),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide:
+                      const BorderSide(color: Color.fromARGB(237, 255, 193, 7)),
                 ),
                 contentPadding:
                     const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
@@ -122,12 +141,12 @@ class _UpdateScreenState extends State<UpdateScreen> {
                       decoration: BoxDecoration(
                         border: Border.all(
                           color: isSelected
-                              ? Colors.deepOrangeAccent
-                              : Colors.grey[300]!,
+                              ? Color.fromARGB(237, 255, 193, 7)
+                              : const Color.fromARGB(204, 255, 255, 255),
                           width: isSelected ? 3 : 1.5,
                         ),
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
+                        color: const Color(0xFF111827),
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -195,8 +214,8 @@ class _UpdateScreenState extends State<UpdateScreen> {
                       context, true); // Kirim sinyal bahwa update selesai
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrangeAccent,
-                  foregroundColor: Colors.white,
+                  backgroundColor: const Color.fromARGB(237, 255, 193, 7),
+                  foregroundColor: const Color.fromARGB(204, 255, 255, 255),
                   padding: EdgeInsets.symmetric(vertical: 18),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
